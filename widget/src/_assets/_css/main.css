@@ -7,6 +7,7 @@ body, .container {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	color: #ffffff;
 }
 
 .container {
