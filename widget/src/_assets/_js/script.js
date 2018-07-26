@@ -9,10 +9,17 @@ request.onload = () => {
 		const data = JSON.parse(request.responseText);
 		const resp = data
 		.map((info) => {
+			const linkItem = document.createElement("a");
+			linkItem.href = info.opportunity.permalink;
+			linkItem.className = "link-item"
+			
 			const listItem = document.createElement("li");
 			listItem.className = "list-item";
+
 			const textoInfo = document.createTextNode(info.opportunity.name);
-			listItem.appendChild(textoInfo);
+
+			linkItem.appendChild(textoInfo);
+			listItem.appendChild(linkItem);
 			list.appendChild(listItem);
 		})
 

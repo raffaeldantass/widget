@@ -11,7 +11,6 @@ body, .container {
 
 .container {
 	background-color: rgb(51, 47, 44);
-	color: #ffffff;
 	width: 40%;
 	height: 350px;
 }
@@ -48,6 +47,11 @@ body, .container {
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	margin: 0;
 	padding: 0;
+}
+
+.link-item {
+	text-decoration: none;
+	color: #ffffff;
 }
 
 .list-item {
