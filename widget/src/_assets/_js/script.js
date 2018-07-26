@@ -1,4 +1,7 @@
+const list = document.getElementById('list');
 const request = new XMLHttpRequest();
+
+
 request.open('GET', 'http://trampos.co/api/oportunidades.json', true);
 
 request.onload = () => {
@@ -6,11 +9,13 @@ request.onload = () => {
 		const data = JSON.parse(request.responseText);
 		const resp = data
 		.map((info) => {
-      console.log(info.opportunity.name)
+			const listItem = document.createElement("li");
+			const textoInfo = document.createTextNode(info.opportunity.name);
+			listItem.appendChild(textoInfo);
+			list.appendChild(listItem);
 		})
 
-		return resp 
-		console.log(resp);
+		return resp; 
 	} else {
 		console.log('error');
 	}
