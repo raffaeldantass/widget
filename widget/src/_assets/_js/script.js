@@ -10,6 +10,7 @@ request.onload = () => {
 		const resp = data
 		.map((info) => {
 			const listItem = document.createElement("li");
+			listItem.className = "list-item";
 			const textoInfo = document.createTextNode(info.opportunity.name);
 			listItem.appendChild(textoInfo);
 			list.appendChild(listItem);
