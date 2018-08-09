@@ -1,2 +1,2 @@
 # widget
-A little card for see some info
+A little card to see some info
